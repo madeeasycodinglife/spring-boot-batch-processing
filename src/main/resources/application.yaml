@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: spring-boot-batch-processing
+  datasource:
+    username: root
+    password: root
+    url: jdbc:mysql://localhost:3306/csv-mysql
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+
+  h2:
+    console:
+      enabled: true
+
+  #      batch configuration
+
+  batch:
+    job:
+      enabled: false
+    jdbc:
+      initialize-schema: ALWAYS
+
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    database-platform: org.hibernate.dialect.MySQLDialect
+
+  output:
+    ansi:
+      enabled: ALWAYS
+
+
+
